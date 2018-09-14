@@ -1,0 +1,7 @@
+They don't do the same thing. 
+
+In the first program, x is incremented each time , since it's definite outside the times method's do block. So at the end, X is 3.
+
+In the second program, x disappears at the end of each iteration, since it's not defined outside of the block. So at the end, you'll get an error message saying that x is undefined.
+
+Testing this hypothesis: yup. 
