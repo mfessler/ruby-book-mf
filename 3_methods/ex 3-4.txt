@@ -1,0 +1,12 @@
+What will this return?
+def scream(words)
+  words = words + "!!!!"
+  return
+  puts words
+end
+
+scream("Yippeee")
+
+
+Will return "Yippeee!!!!" but print nothing - it returns before the puts.
+
