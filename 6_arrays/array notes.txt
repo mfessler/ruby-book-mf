@@ -1,0 +1,30 @@
+Array methods
+
+array.pop -- removes last element of array, returns it.
+array.push("x") -- adds "x" to end of array and returns array
+array << "x" -- same as push
+
+array.map { |n| n**2 } - returns new array with terms squared. Does not modify original
+array.delete_at(n) - deletes array term at index n. Returns deleted item
+array.delete("cat") - deletes all occurrences of "cat" from array, returns "cat"
+array.uniq - returns new array with all dupes removed. Does not touch original array. 
+array.uniq! - modifies array to remove all dupes
+array.each { |n| puts "This term is #{n}!"} -- does something based on each term. Returns original array if htere's a block. If not, returns an Enumerator (see later)
+array.select { |number| number > 5} - returns new array of only terms that return true to the expression.
+array.unshift(n) = prepends n to the beginning of the aray. returns modified array.
+array.to_s Converts array to string representation. Done implicitly in puts "The array is #{array}"
+
+array.include?(n) - returns true if n is a term fo the array.
+array.flatten - flattens out nested arrays into one-dimensional array. returns new array, leaves old one alone
+array.flatten! - mutates array to flatten it, returns it.
+
+array.each_index { |i| puts "This is index #{i}" } - do what you want in there. Returns original array.
+array.each_with_index { |val, i| puts "Entry with index #{i} is #{val}"} - see examples. Returns original array.
+array.sort - returns sorted array, leaves old one alone. Can use array.sort! to do it destructively. 
+array.product(array2) -- returns new array combining all terms of array1 and array 2. 
+  Example. irb :001 > [1, 2, 3].product([4, 5])
+  => [[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
+
+each vs map - each for interation, map for transformation
+  each - do something with each term, but return value is original array
+  map - returns a new array containing values returned by block.

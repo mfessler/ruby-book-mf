@@ -1,0 +1,9 @@
+What does each thing return?
+
+arr = [15, 7, 18, 5, 12, 8, 5, 1]
+
+1. arr.index(5) ==> 3 (4th term)
+
+2. arr.index[5] ==> 8 (5th term). Nope -error!arr[]
+
+3. arr[5]  --> 8

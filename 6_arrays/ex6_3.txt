@@ -1,0 +1,10 @@
+How to return the word "example"?
+arr = [["test", "hello", "world"],["example", "mem"]]
+
+arr.last.first
+
+(if you know the location)
+
+arr.flatten.select { |n| n=="example"}.first
+
+(if you don't)
