@@ -1,0 +1,11 @@
+What does the each method return here?
+
+x = [1, 2, 3, 4, 5]
+x.each do |a|
+  a + 1
+end
+
+Answer:
+2 3 4 5 6 --> No. Returns the original array. SO that means that the do section actually does nothing.
+
+
