@@ -1,0 +1,8 @@
+Yes.
+
+hash values as arrays:
+h={evens:[2,4,6,8], odds:[1,3,5,7]
+
+array of hashes
+
+a=[{day:"monday", lunch:"soup"},{day:"tuesday", lunch:"burgers"}]
