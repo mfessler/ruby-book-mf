@@ -1,0 +1,50 @@
+#hash notes
+
+Old syntax: person = { :name => "Bob", :eyecolor => "brown"}
+New syntax: person = { name: "Bob", eyecolor: "brown"}
+
+add to hash: person{:hair} = "blond"
+delete from hash: person.delete(:hair)
+retrieve: person[:eyecolor] (note square brackets!)
+merge two hashes: person.merge!(hash2) -- changes "person" hash to include union of both hashes
+  Alternative: person.merge(hash2) would return a new hash but leave the old ones unmodified
+
+Iterating:
+person.each do |key, value|
+  puts "#{key} is #{value}."
+end
+
+--- 
+Hash application: can hold optional parameters to a method
+
+def greeting (name, options= {})
+ if options.empty?
+  puts "Hi, #{name}!"
+else
+  puts "Hi, my name is #{name} and I'm #{options[:age]} years old. I live in #{options[:city],options[:state]}."
+end
+
+To call this
+greetings("Bob")
+or 
+greetings("Bob, {age: 62, city: "New York City", state: "New York"})
+
+OR:
+greetings ("Bob", age:62, city:"New York City", state: "New York) -- curly braces not required when hash is the last argument.
+
+
+methods:
+
+hash.has-key?("Steve")
+hash.select { | k, v| (v>20)} - returns all pairs that return true when run through the block.
+hash.fetch(:age) - returns value. Can also specify value if not found:
+hash.fetch("Larry", "Larry isn't in this hash."). Can also pass in block to run on failure. 
+hash.to_a -- returns an array version of hash (does not modify original_
+  ages = {"Bob" => 42, "Steve" => 31, "Joe" => 19}
+  ages.to_a returns [["Bob, 42]. ["Steve", 31], ["Joe", 19]
+
+ages.keys - return array of all keys
+ages.values - returns array of all values 
+  note that you can do array ops on that return ages.keys.each {|k| puts k}
+
+  

@@ -1,0 +1,4 @@
+If you see this error, what is most likely problem?
+NoMethodError: undefined method `keys' for Array
+
+There is no method called keys for Array objects (Clearly - they have numeric indexes, but hashes are the ones with keys. )
